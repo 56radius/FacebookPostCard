@@ -7,6 +7,8 @@ import {
   Image,
   TextInput,
   FlatList,
+  ScrollView,
+  Button,
 } from "react-native";
 
 import {
@@ -16,7 +18,7 @@ import {
   FontAwesome5,
 } from "@expo/vector-icons";
 
-export default function App() {
+export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       {/* texts to create welcome back and login to continue, This is the first section  */}
@@ -58,16 +60,14 @@ export default function App() {
           </View>
 
           <View>
-            <Text
-              style={{
-                marginLeft: 45,
-                color: "#fff",
-                fontSize: 27,
-                fontWeight: "bold",
-              }}
-            >
-              Sign Up
-            </Text>
+            <Button title="Submit" />
+          </View>
+
+          <View>
+            <Button
+              title="Sign In"
+              onPress={() => navigation.navigate("LoginScreen")}
+            />
           </View>
         </View>
       </View>
@@ -129,5 +129,9 @@ const styles = StyleSheet.create({
     marginLeft: -8,
     fontSize: 20,
     color: "#ffe200",
+  },
+
+  form: {
+    width: "70%",
   },
 });
