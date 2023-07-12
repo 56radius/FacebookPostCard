@@ -101,11 +101,22 @@ export default function LoginScreen({ navigation }) {
             </View>
 
             {/* Login Button */}
-            <View style={{ borderWidth: 2, borderRadius: 16 }}>
+            <View
+              style={{
+                borderRadius: 16,
+                backgroundColor: "#fff",
+                justifyContent: "center",
+                flexDirection: "row",
+                justifyContent: "space-between",
+              }}
+            >
               <Button
+                style={styles.Button}
                 title="Log In"
-                onPress={() => navigation.navigate("FacebookFeed")}
+                onPress={() => navigation.navigate("FaceFeed")}
               />
+
+              <AntDesign name="enter" size={24} color="black" />
             </View>
 
             {/* Sign up button */}

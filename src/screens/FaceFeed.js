@@ -9,7 +9,7 @@ import {
   FontAwesome5,
 } from "@expo/vector-icons";
 
-export default function App() {
+export default function FaceFeed({ navigation }) {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
   return (
@@ -26,7 +26,7 @@ export default function App() {
                 height: 50,
                 borderRadius: 50,
               }}
-              source={require("./assets/joker.png")}
+              source={require("../../assets/joker.png")}
             />
             <Text style={styles.Text}> DC Comics . Follow </Text>
           </View>
@@ -51,7 +51,7 @@ export default function App() {
             height: 300,
             borderRadius: 8,
           }}
-          source={require("./assets/comics.jpeg")}
+          source={require("../../assets/comics.jpeg")}
         />
 
         <View style={styles.Footer}>
@@ -175,7 +175,7 @@ export default function App() {
                 height: 50,
                 borderRadius: 50,
               }}
-              source={require("./assets/yabaright.png")}
+              source={require("../../assets/yabaright.png")}
             />
             <Text style={styles.Text}> YabaRightOnline . Follow </Text>
           </View>
@@ -203,7 +203,7 @@ export default function App() {
           }}
           shouldPlay
           isLooping
-          source={require("./assets/video.mp4")}
+          source={require("../../assets/video.mp4")}
         />
 
         <View style={styles.Footer}>
@@ -327,7 +327,7 @@ export default function App() {
                 height: 50,
                 borderRadius: 50,
               }}
-              source={require("./assets/avatar.png")}
+              source={require("../../assets/avatar.png")}
             />
             <Text style={styles.Text}> Mariam Abel . Follow </Text>
           </View>
