@@ -20,60 +20,62 @@ import {
 
 export default function HomeScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      {/* texts to create welcome back and login to continue, This is the first section  */}
-      <Text
-        style={{
-          color: "#ffe200",
-          flexDirection: "row",
-          fontSize: 33,
-          marginLeft: -230,
-          marginTop: 140,
-          fontWeight: "bold",
-        }}
-      >
-        Sign
-      </Text>
-      <Text
-        style={{
-          color: "#ffe200",
-          flexDirection: "row",
-          fontSize: 33,
-          marginLeft: -280,
-          marginTop: 8,
-          fontWeight: "bold",
-        }}
-      >
-        Up
-      </Text>
+    <ScrollView>
+      <View style={styles.container}>
+        {/* texts to create welcome back and login to continue, This is the first section  */}
+        <Text
+          style={{
+            color: "#ffe200",
+            flexDirection: "row",
+            fontSize: 33,
+            marginLeft: -230,
+            marginTop: 140,
+            fontWeight: "bold",
+          }}
+        >
+          Sign
+        </Text>
+        <Text
+          style={{
+            color: "#ffe200",
+            flexDirection: "row",
+            fontSize: 33,
+            marginLeft: -280,
+            marginTop: 8,
+            fontWeight: "bold",
+          }}
+        >
+          Up
+        </Text>
 
-      <View style={styles.Footer}>
-        <View style={styles.form}>
-          {/* Email input */}
-          <View style={styles.input}>
-            <TextInput placeholder="Please enter email address" />
-          </View>
+        <View style={styles.Footer}>
+          <View style={styles.form}>
+            {/* Email input */}
+            <View style={styles.input}>
+              <TextInput placeholder="Please enter email address" />
+            </View>
 
-          {/* Password input */}
-          <View style={styles.input}>
-            <TextInput placeholder="Please enter your password" />
-          </View>
+            {/* Password input */}
+            <View style={styles.input}>
+              <TextInput placeholder="Please enter your password" />
+            </View>
 
-          <View>
-            <Button title="Submit" />
-          </View>
+            <View style={{}}>
+              <Button title="Submit" />
+            </View>
 
-          <View>
-            <Button
-              title="Sign In"
-              onPress={() => navigation.navigate("LoginScreen")}
-            />
+            <View>
+              <Button
+                title="Sign In"
+                onPress={() => navigation.navigate("LoginScreen")}
+              />
+            </View>
           </View>
         </View>
-      </View>
 
-      <StatusBar style="auto" />
-    </View>
+        <StatusBar style="auto" />
+      </View>
+    </ScrollView>
   );
 }
 
