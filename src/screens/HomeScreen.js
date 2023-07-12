@@ -29,7 +29,7 @@ export default function HomeScreen({ navigation }) {
             flexDirection: "row",
             fontSize: 33,
             marginLeft: -230,
-            marginTop: 140,
+            marginTop: 60,
             fontWeight: "bold",
           }}
         >
@@ -67,7 +67,7 @@ export default function HomeScreen({ navigation }) {
             <View>
               <Button
                 title="Sign In"
-                onPress={() => navigation.navigate("LoginScreen")}
+                onPress={() => navigation.navigate("Login")}
               />
             </View>
           </View>
@@ -88,11 +88,10 @@ const styles = StyleSheet.create({
   },
 
   Footer: {
-    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
     margin: 14,
-    marginTop: 90,
+    marginTop: 50,
     width: "100%",
     height: 350,
     backgroundColor: "#ffe200",
